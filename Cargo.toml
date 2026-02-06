@@ -1,0 +1,23 @@
+[package]
+name = "esp32c3_rtic_template"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+rtic = {version = "2.2.0", features = ["riscv-esp32c3-backend"]}
+esp-hal = { version = "1.0.0-beta.0", features = ["esp32c3"] }
+esp-backtrace = { version = "0.18.1", features = [
+    "esp32c3",
+    "panic-handler",
+    "println",
+] }
+
+esp32c3 = {version = "0.31.0", features = ["critical-section"]}
+esp-println = { version = "0.16.1", features = ["esp32c3", "auto"] }
+
+[[bin]]
+name = "esp32c3_rtic_template"
+path = "src/main.rs"
+test = false
+bench = false
