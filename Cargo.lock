@@ -403,6 +403,7 @@ version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "24c0b2a8e8efa1755a28ca3ef54c85436f76531ba93dc79b55d5330349d067d7"
 dependencies = [
+ "critical-section",
  "vcell",
 ]
 
@@ -423,7 +424,7 @@ dependencies = [
  "esp-backtrace",
  "esp-hal",
  "esp-println",
- "esp32c3 0.31.0",
+ "esp32c3 0.29.0",
  "rtic",
 ]
 
